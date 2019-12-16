@@ -1,0 +1,20 @@
+<div class="row m-5">
+    <div class="col">
+        <label for="exampleInputEmail1">País:</label>
+        <select class="form-control" (change)="onChange($event.target.value)">
+            <option value="">Selecciona tu país</option>
+            <option *ngFor="let paise of paises" value="{{paise.letra}}">{{paise.nombre}}</option>
+        </select>
+    </div>
+    <div class="col">
+        <label for="exampleInputEmail1">Categoria:</label>
+        <select class="form-control" (change)="onChan($event.target.value)">
+            <option value="">Selecciona una categoria</option>
+            <option *ngFor="let cate of categoria" value="{{cate.cat}}">{{cate.nombre}}</option>
+        </select>
+    </div>
+</div>
+
+<app-loading *ngIf="loading"></app-loading>
+
+<app-tarjetas *ngIf="!loading" [items]="pais"> </app-tarjetas>

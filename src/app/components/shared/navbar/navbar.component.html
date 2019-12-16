@@ -1,0 +1,19 @@
+<nav *ngIf="noti.visible" class="navbar navbar-expand-md navbar-dark" style="background-color: black;">
+    <a class="navbar-brand">
+        <img src="../../../../assets/img/notiapp.png " width="30 " height="30 ">NotiApp</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item" routerLinkActive="active">
+                <a class="nav-link" routerLink="home">Home </a>
+            </li>
+            <li class="nav-item" routerLinkActive="active">
+                <a class="nav-link" routerLink="filtrar">Filtrar</a>
+            </li>
+        </ul>
+        <a (click)="salir()"><i class="fas fa-sign-out-alt fa-2x" style="color: #dc3545;"></i></a>
+    </div>
+</nav>
